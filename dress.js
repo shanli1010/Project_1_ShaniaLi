@@ -54,7 +54,13 @@ class Dress {
     line(this.xpos,this.ypos,this.xpos-30, this.ypos+30);
     
     
+    /*The following if statement changes the display of either the white or black part of dress
+    so it looks like it's swaying*/
+    
+    if (((this.ypos>150)&&(this.ypos<200))||((this.ypos>250)&&(this.ypos<300))||((this.ypos>350)&&(this.ypos<400))||((this.ypos>450)&&(this.ypos<500))||((this.ypos>500)&&(this.ypos<550))||((this.ypos>550)&&(this.ypos<600))||((this.ypos>650)&&(this.ypos<700))||((this.ypos>750)&&(this.ypos<800))||((this.ypos>850)&&(this.ypos<900))||((this.ypos>950)))
+    {
     noStroke();                    //White right part of flowy dress
+        fill(255);
     beginShape();
     curveVertex(this.xpos-65,this.ypos+130);
     curveVertex(this.xpos-65,this.ypos+130); 
@@ -66,7 +72,8 @@ class Dress {
     curveVertex(this.xpos-65,this.ypos+130);
     endShape();
     
-    fill(0);                      //Black left part of flowy dress
+      fill(0);                      //Black left part of flowy dress
+      noStroke();
     beginShape();
     curveVertex(this.xpos+65,this.ypos+130);
     curveVertex(this.xpos+65,this.ypos+130); 
@@ -77,6 +84,37 @@ class Dress {
     curveVertex(this.xpos+65, this,ypos+130);
     curveVertex(this.xpos+65,this.ypos+130);
     endShape();
+   
+    }
+    else 
+    {
+    fill(0);                      //Black left part of flowy dress
+    noStroke();
+    beginShape();
+    curveVertex(this.xpos+65,this.ypos+130);
+    curveVertex(this.xpos+65,this.ypos+130); 
+    curveVertex(this.xpos-100, this.ypos+150);
+    curveVertex(this.xpos-120, this.ypos+450);
+    //curveVertex(this.xpos,this.ypos+300);
+    curveVertex(this.xpos+60, this.ypos+230);
+    curveVertex(this.xpos+65, this,ypos+130);
+    curveVertex(this.xpos+65,this.ypos+130);
+    endShape();
+    
+      noStroke();                    //White right part of flowy dress
+        fill(255);
+    beginShape();
+    curveVertex(this.xpos-65,this.ypos+130);
+    curveVertex(this.xpos-65,this.ypos+130); 
+    curveVertex(this.xpos+100, this.ypos+150);
+    curveVertex(this.xpos+120, this.ypos+450);
+    //curveVertex(this.xpos-50,this.ypos+300);
+    curveVertex(this.xpos-60, this.ypos+230);
+    curveVertex(this.xpos-65, this,ypos+130);
+    curveVertex(this.xpos-65,this.ypos+130);
+    endShape();
+    
+    }
     
   
     
